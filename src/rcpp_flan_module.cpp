@@ -14,24 +14,36 @@ RCPP_MODULE(flan_module) {
 	.method("CovGFEstimation",&FLAN_MutationModel::covariance,"standard deviation of GF method")
 	.method("unbias.mutprob",&FLAN_MutationModel::unbiasPiEstimation,"unbias mutprob estimation")
   ;
-  
+
   class_<FLAN_Sim>("FlanSim")
 	.constructor<List>()
 	.method("rflan",&FLAN_Sim::computeSamplesMutantsFinalsNumber,"compute sample mutants")
   ;
 
-  
+
+  // class_<FLAN_SimClone>("FlanSimClone")
+	// .constructor<double,double,List>()
+	// .method("rclone",&FLAN_SimClone::computeSample,"compute Clone")
+  // ;
+
+
   class_<FLAN_ExponentialClone>("FlanExpClone")
 	.constructor<List>()
 	.method("dclone",&FLAN_ExponentialClone::computeProbability,"compute probability")
+  // .method("integral",&FLAN_ExponentialClone::testIntegral,"compute integrale")
 	.method("dclonedr",&FLAN_ExponentialClone::computeProbability1DerivativeRho,"compute probability")
 	.method("pgf2",&FLAN_ExponentialClone::computeGeneratingFunction2,"compute generating function for several z")
   ;
-  
+
   class_<FLAN_DiracClone>("FlanDirClone")
 	.constructor<List>()
 	.method("dclone",&FLAN_DiracClone::computeProbability,"compute probability")
+	.method("dclonedr",&FLAN_DiracClone::computeProbability1DerivativeRho,"compute probability")
 	.method("pgf2",&FLAN_DiracClone::computeGeneratingFunction2,"compute generating function for several z")
   ;
-  
+
+  //
+  // class_<MATH_Integration>("MathInt")
+  // .constructor<List>
+  //
 }
