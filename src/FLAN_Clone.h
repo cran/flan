@@ -56,6 +56,11 @@ public:
     }
   };
 
+  FLAN_Dist(std::string name, std::vector<double> params) {
+    mName=name;
+    mParams=params;
+  }
+
   ~FLAN_Dist(){};
 
   std::string getDistName() {
@@ -79,8 +84,8 @@ private:
 
     double mFitness;
     double mDeath;
-    FLAN_Dist *mDist;   // Lifetime distribution
-    FLAN_Dist *mDistN;  // Lifetime distribution for normal cells (drawing function)
+    FLAN_Dist *mDist=NULL;   // Lifetime distribution
+    FLAN_Dist *mDistN=NULL;  // Lifetime distribution for normal cells (drawing function)
 
 protected:
   static const double DEATH_EPS_SIM;     // Threshold for death
@@ -158,7 +163,7 @@ private:
     double mFitness;
     double mDeath;
 
-    Function* mMU;
+    Function* mMU=NULL;
 
 protected:
   static const double DEATH_EPS_SIM;     // Threshold for death
@@ -243,11 +248,12 @@ protected:
 
     FLAN_Clone(List params){
 
-      mDeath=as<double>(params["death"]);
+      // mDeath=as<double>(params["death"]);
 
-      if(params.size() >= 2) {
-	mFitness=as<double>(params["fitness"]);
-      }
+      // if(params.size() >= 2) {
+      if(!Rf_isNull(params["death"]))  mDeath=as<double>(params["death"]);
+	    if(!Rf_isNull(params["fitness"]))  mFitness=as<double>(params["fitness"]);
+      // }
       // std::cout<<"Fitness ="<<mFitness<<std::endl;
       // std::cout<<"Death ="<<mDeath<<std::endl;
     };
@@ -326,7 +332,7 @@ class FLAN_ExponentialClone : public FLAN_Clone {
 
   private:
 
-    MATH_Integration* mIntegrator;
+    MATH_Integration* mIntegrator=NULL;
 
     void init() {
       List info=Environment::base_namespace().get(".Machine");
@@ -345,8 +351,9 @@ class FLAN_ExponentialClone : public FLAN_Clone {
     };
 
     FLAN_ExponentialClone(List params):FLAN_Clone(params) {
-      if(params.size() == 3) mPlateff=as<double>(params["plateff"]);
-      else mPlateff=1;
+      // if(params.size() == 3) mPlateff=as<double>(params["plateff"]);
+      // else mPlateff=1;
+      if(!Rf_isNull(params["plateff"]))  mPlateff=as<double>(params["plateff"]);
       init();
     };
     FLAN_ExponentialClone(double death):FLAN_Clone(death) {
@@ -435,7 +442,7 @@ protected:
   double mPlateff;
 private:
 
-  MATH_Integration* mIntegrator;
+  MATH_Integration* mIntegrator=NULL;
   double mMuinf;
 
   void init() {
@@ -456,8 +463,9 @@ public:
   };
 
   FLAN_InhomogeneousClone(List params):FLAN_Clone(params) {
-    if(params.size() == 4) mPlateff=as<double>(params["plateff"]);
-    mMuinf=as<double>(params["muinf"]);
+    // if(params.size() == 4) mPlateff=as<double>(params["plateff"]);
+    if(!Rf_isNull(params["plateff"]))  mPlateff=as<double>(params["plateff"]);
+    if(!Rf_isNull(params["muinf"]))  mMuinf=as<double>(params["muinf"]);
     init();
   };
 
