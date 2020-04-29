@@ -1,6 +1,6 @@
-15f63900ba6653715a691ad499ad715a *DESCRIPTION
-9945d6e7e51a62d14bbc4a3bfa1326d7 *NAMESPACE
-f1597352101ff3d47575eb725195fa5a *R/flan.R
+d158b632448ec308ecb35cce96be240d *DESCRIPTION
+b8c92b3b1844ed7d47f38231874570fd *NAMESPACE
+310c87438bf08b0b887906e2c456434b *R/flan.R
 26a20ded1dbc8a24eb92b444c236d1f6 *R/zzz.R
 e3f0ed8900ea7d880893ec28a5781826 *README
 08eed9f762f282382a31307110e10ba7 *data/boeal.RData
@@ -12,10 +12,10 @@ f593e2e7f93732b8ca5dd2383a7d0590 *data/luriadel.RData
 cd2b1164860684fb6ba5865be2ad3d14 *man/boeal.Rd
 ca2a9df11b73106cfaf2724d63f55141 *man/david.Rd
 6d6a15941c71b8c439d9745cab2e5a89 *man/draw.clone.Rd
-7b32dcc82ce5d051d2ce6e999d2d4be7 *man/flan-package.Rd
-dad3b7780a20c2e6ac48e3da73e10ab8 *man/flan.test.Rd
+4126a96807edce3f239713b5d126f7b7 *man/flan-package.Rd
+17052c36ae8de0609044515a65735cec *man/flan.test.Rd
 ffe6fab5bdd4556f85109f3f511e747f *man/luriadel.Rd
-0a09c1b781efeb7d1f6947866bd3d4bc *man/mutestim.Rd
+80fb1b8331a4f9259d52c81b0e49cae8 *man/mutestim.Rd
 d59413900f9116279ffdc1c6a22bb35b *man/rflan.Rd
 fe7219fccbeef07f5f9331d712d168cf *man/roster.Rd
 f1359df8988e6be537a729586c24706d *man/werhoff.Rd
