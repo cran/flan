@@ -12,7 +12,10 @@
 \usage{
   draw.clone(t,mutprob=1.e-2,fitness=1.,death=0.,
 	     dist=list("lnorm",meanlog=-0.3795851,sdlog=0.3016223),
-	     col=c("green4","orange4"))
+	     col=c("green4","orange4"),
+       with.lab = TRUE,
+       with.pch = FALSE
+     )
 }
 
 \arguments{
@@ -21,7 +24,9 @@
   \item{fitness}{ fitness parameter: numeric positive. By default 1. }
   \item{death}{ death probability: numeric between 0 and 0.5. By default 0. }
   \item{dist}{ lifetime distribution for mutant cells. See Details. }
-  \item{col}{ vector of size 2 of colors. The first is for the normal cells, the second for the mutant cells. }
+  \item{col}{ vector of size 2 of colors. The first is for the normal cells, the second for the mutant cells. },
+  \item{with.lab}{ logical. If TRUE, parameters will appear as title. },
+  \item{with.pch}{ logical. If TRUE, mutant cells will be represented with triangles, normal cells with regular dots.}
 }
 
 

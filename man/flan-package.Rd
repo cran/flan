@@ -16,8 +16,8 @@
   \tabular{ll}{
     Package: \tab flan\cr
     Type: \tab Package\cr
-    Version: \tab 0.8\cr
-  Date: \tab 2020-04-29\cr
+    Version: \tab 0.9\cr
+  Date: \tab 2021-05-26\cr
     License: \tab GPL\cr
   }
 
@@ -33,7 +33,7 @@
 \author{
   Adrien Mazoyer, Rémy Drouilhet, Stéphane Despréaux, and Bernard Ycart
 
-  Maintainer: Adrien Mazoyer <mazoyer.adrien@courrier.uqam.ca>
+  Maintainer: Adrien Mazoyer <adrien.mazoyer@math.univ-toulouse.fr>
 }
 
 \references{
