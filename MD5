@@ -1,4 +1,4 @@
-237566906efc172160cee207b7d08b1e *DESCRIPTION
+29d3b014636efdc96c2076c81d5db1ae *DESCRIPTION
 ad09a2c5e95881a9b1ab0bc889c5def9 *NAMESPACE
 9332a683c816524f39cd1d4f2719b5f0 *R/flan.R
 26a20ded1dbc8a24eb92b444c236d1f6 *R/zzz.R
@@ -28,7 +28,7 @@ ee5ec0fdac7787b326de3ed822a29d5e *src/FLAN_Sim.h
 b1ef0cbf7a02235ee836e889628aaa63 *src/MATH_Function.cpp
 6ee3c9aeda3e6ae669efe0cccb642d3a *src/MATH_Function.h
 22421756b1aa87ad1295311958aa7414 *src/Makevars
-84b01e346d79ccd1aa60704c7a41ed27 *src/Makevars.win
+81591b95ad964d7b8899e2090b670e2b *src/Makevars.win
 917883a8a4ced48003da732d0b5d7ff9 *src/init.c
 4ef8b96674a59340ba9e329b724d0b78 *src/rcpp_flan_module.cpp
 2498012cdd0f95e10fb974831ecf2681 *src/rcpp_flan_module.h
